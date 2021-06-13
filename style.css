@@ -1,0 +1,176 @@
+/* This is a common technique called a CSS reset. 
+Different browsers use different default margins, causing sites to look different by margins. 
+The * means "all elements" (a universal selector), 
+so we are setting all elements to have zero margins, and zero padding, 
+thus making them look the same in all browsers. */
+*{
+    margin: 0px;
+    padding: 0px;
+    /* Since the result of using the "box-sizing: border-box";
+     is so much better, many developers want all elements on their pages to work this way.
+    The code below ensures that all elements are sized in this more intuitive way. */
+    box-sizing: border-box; 
+ }
+
+
+:root {
+    /* Assuming the browser font size is set to 16px (i.e. the default), 
+    setting the font size of the root html element to 100% will default 1rem to 16px. 
+    This is still not the optimal solution. A better approach will be to use 62.5%. 
+    This will equate 1rem to 10px. Starting with this as the base simplifies the calculations. */
+    font-size: 62.5%;
+}
+  body {
+    /* Body font size 16px */
+    font-size: 1.6rem;
+    background-image: url(./images/netflix-background-image.jpg);
+    color: white;
+  }
+
+  #container {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 30px 100px;
+  }
+  
+  #title {
+    text-align: center;
+    font-size: 5rem;
+    font-family: "Bowlby One SC", cursive;
+    padding-top: 15px;
+    letter-spacing: 5px;
+  }
+  span {
+    color: red;
+    
+  }
+  
+  #description {
+    text-align: center;
+    font-size: 2.3rem;
+    font-family: "Sorts Mill Goudy", sans-serif;
+    margin-bottom: 15px;
+  }
+  #survey-form {
+    width: 500px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    margin: auto;
+    padding-top: 10px;
+  }
+  
+  #nameLabel,
+  #emailLabel,
+  #numberLabel,
+  #contentTypeDropdownLabel {
+    margin-top: 16px;
+    height: 36px;
+    width: 400px;
+    border: none;
+    padding: 10px;
+  }
+  
+  .box, checkbox-container {
+    margin-top: 20px;
+    margin-left: 40px;
+  }
+  
+  .text-area {
+    margin-top: 10px;
+  }
+  #submitBtn {
+    font-size: larger;
+    margin: 16px 0px 16px 150px;
+    height: 45px;
+    width: 160px;
+    border-radius: 50px;
+    border: none;
+    background-color: red;
+    color:white;
+    cursor: pointer;
+  }
+  #submitBtn:hover {
+    background: green;
+    color: white;
+  }
+  
+  select{
+    color: green;
+    font-size: 14px;
+    }
+  
+    /* The ::placeholder pseudo element 
+    (or a pseudo class, in some cases, depending on the browser implementation) 
+    allows you to style the placeholder text of a form element.
+    You can style that text across most browsers with this smattering of vendor-prefixed selectors: */
+  
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: green;
+    font-size:14px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: green;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: green;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: green;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container label {
+    cursor: pointer;
+    display: flex;
+}
+
+.checkbox-container input[type='checkbox'] {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-container label::before {
+    content: '';
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: .15em;
+    margin-right: .25em;
+    border: .05em solid black;
+    background-color: white;
+}
+
+.checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+    background-color: #35E07D;
+}
+
+.checkbox-container input[type='checkbox']:focus + label::before {
+    box-shadow: 0 0 20px gold;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label,
+.checkbox-container input[type='checkbox']:disabled {
+    color: #aaa;
+    cursor: default;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+    /* https://graphemica.com/ */
+    content: '\01F5F8';
+    background-color: #27AE60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.checkbox-container input[type='checkbox']:disabled + label::before {
+    background-color: #ccc;
+    border-color: #999;
+}

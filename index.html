@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dostugoSoft-NetFlix Survey Form</title>
+  <!-- To request multiple font families, separate the names with a pipe character (|).
+  The Google Fonts API provides the regular version of the requested fonts by default. 
+  To request other styles or weights, append a colon (:) to the name of the font, 
+  followed by a list of styles or weights separated by commas (,). -->
+  <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Sorts+Mill+Goudy:italic&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="style_netflix.css">
+</head>
+
+<body>
+  <div id="container">
+    <h1 id="title"> 
+      Net<span>Flix</span>
+    </h1>
+
+    <h3 id="description">
+      Thank you for signing up at Netflix. Tell us more about your self
+    </h3>
+
+    <form id="survey-form" action="result.html" method="GET" target="_blank">
+
+      <div class="box">
+        <!-- if we want to locate name label next to input are, this will be a good solution.
+        <label>Name
+          <input type="text" name="nameDb" id="nameLabel" placeholder="enter your name"required><br>
+        </label> -->
+        <label for="nameLabel" id="name-label">Name</label><br>
+        <input type="text" name='nameDb' placeholder="enter your name" id="nameLabel" required><br>
+      </div>
+
+      <div class="box">
+        <label for="numberLabel" id="number-label">Age</label><br>
+        <input type="number" min="16" max="121" name='ageDb' placeholder="age" id="numberLabel" required><br>
+      </div>
+
+      <div class="box">
+        <label for="emailLabel" id="email-label">Email</label><br>
+        <input type="email" name="emailDb" placeholder="enter your Email" id="emailLabel" required><br>
+      </div>
+
+      <div class="box">
+        <label for='contentTypeDropdownLabel' id="dropdown-label">Content type</label><br>
+        <select name='contentType' id="contentTypeDropdownLabel">
+          <option value="Movie">Movie</option>
+          <option value="Series" selected>Series</option>
+        </select><br />
+      </div>
+
+      <div class="box">
+        <label id="checkboxMovieType"> Movie Type</label><br>
+
+          <!-- <label for="checkboxFirst"><input type="checkbox" id="checkboxFirst" name="movieType1Db" value="Comedy">
+          Comedy</label><br>
+        <label for="checkboxSecond"><input type="checkbox" id="checkboxSecond" name="movieType2Db" value="Action">
+          Action</label><br>
+      <label for="checkboxThird"><input type="checkbox" id="checkboxThird" name="movieType3Db" value="Romance" checked>
+          Romance</label><br> -->
+      
+        <div class="checkbox-container">
+          <!-- <input type="checkbox" id="cb1" disabled checked> -->
+          <input type="checkbox" id="checkboxFirst"name="movieType1Db" value="Comedy">
+          <label for="checkboxFirst">Comedy</label>
+        </div>
+        
+        <div class="checkbox-container">
+          <input type="checkbox" id="checkboxSecond" name="movieType2Db" value="Action">
+          <label for="checkboxSecond">Action</label>
+        </div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="checkboxThird"  name="movieType3Db" checked>
+          <label for="checkboxThird">Romance</label>
+        </div>
+        <br>    
+      </div>
+
+      <div class="box">
+        <label id="radiobtnGender">Gender</label><br>
+        <label for="radioBtnFirst"><input type="radio" id="radioBtnFirst" name="genderDb" value="male"> Male</label><br>
+        <label for="radioBtnSecond"><input type="radio" id="radioBtnSecond" name="genderDb" value="female"> Female</label><br>
+        <label for="radioBtnThird"><input type="radio" id="radioBtnThird" name="genderDb" value="other"> Other</label><br>
+      </div>
+
+      <div class="textarea box">
+        <label id="feed-label">Feed back</label><br>
+        <textarea class="text-area" name="message" rows="5" cols="50" placeholder="any comment"></textarea><br />
+      </div>
+      <div>
+        <input type="submit" id="submitBtn">
+      </div>
+      
+    </form>
+  </div>
+
+</body>
+
+</html>

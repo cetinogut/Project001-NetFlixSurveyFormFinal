@@ -1,6 +1,6 @@
-This is a HTML-CSS survey from design. No javascript required. result.html mimics a backend server.
+This is an HTML-CSS survey from design. No javascript required. result.html mimics a backend server.
 html form element names are given explicitely such as nameDb, ageDb to remind developers the value for server side.
-This project includes two style files. "styles_netflix.css" is designed as per project requirement. "styles.css" is designed to improve placeholder text color and size, use of rem as text size and a custom checkbox originated but customized further from Web Dev simplified. (https://www.youtube.com/watch?v=YyLzwR-iXtI)
+This project includes two style files. "styles_netflix.css" is designed as per project requirements. "styles.css" is designed to improve placeholder text color and size, use of rem as text size and a custom checkbox originated but customized further from Web Dev simplified. (https://www.youtube.com/watch?v=YyLzwR-iXtI)
 ### Problem Statement
 Your company has recently started on a project that aims to conduct a survey to measure the demands and interests of its customers. So you and your colleagues have started to work on the project.
 ### Project Design
